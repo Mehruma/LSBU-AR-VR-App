@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borough Road - LSBU VR Tour</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="images/logo (2).png" alt="University Logo" />
+      <button id="settings-btn">⚙️</button>
+    </header>
+
+    <!-- Back Button Moved Below the Header -->
+    <button onclick="goBack()" class="back-btn">⬅ Back</button>
+
+    <div class="building-card">
+      <!-- 3D Model Display -->
+      <div class="scene-container">
+        <a-scene embedded vr-mode-ui="enabled: false">
+          <a-entity
+            gltf-model="borough-building/scene.gltf"
+            position="0 0.5 -2"
+            scale="1.2 1.2 1.2"
+            animation="property: rotation; to: 0 50 0; loop: true; dur: 15000; easing: linear;"
+          ></a-entity>
+        </a-scene>
+      </div>
+
+      <!-- Title & Message -->
+      <div class="popup-content">
+        <h1>Borough Road</h1>
+        <p>
+          This is a walkthrough of the LSBU Borough Road building. For a full
+          experience, please use an AR/VR headset!
+        </p>
+        <button class="play-btn">Play Now</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

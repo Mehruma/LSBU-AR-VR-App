@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LSBU VR Tour</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <span id="battery-status">🔋 Fully charged</span>
+      <img id="logo" src="images/logo (2).png" alt="University Logo" />
+      <button id="settings-btn">⚙️</button>
+    </header>
+
+    <section id="carousel">
+      <div class="building-card">
+        <div class="scene-container">
+          <a-scene embedded vr-mode-ui="enabled: true">
+            <a-entity
+              gltf-model="borough-building/scene.gltf"
+              position="0 1 -2"
+              scale="1.2 1.2 1.2"
+              animation="property: rotation; to: 0 50 0; loop: true; dur: 15000; easing: linear;"
+            ></a-entity>
+          </a-scene>
+        </div>
+        <p>Borough Building</p>
+        <button class="enter-btn" onclick="window.location.href='borough.html'">
+          Enter
+        </button>
+      </div>
+
+      <div class="building-card">
+        <div class="scene-container">
+          <a-scene embedded vr-mode-ui="enabled: true">
+            <a-entity
+              gltf-model="Faraday-wing/scene.gltf"
+              position="0 1 -2"
+              scale="0.1 0.1 0.1"
+              animation="property: rotation; to: 0 50 0; loop: true; dur: 15000; easing: linear;"
+            ></a-entity>
+          </a-scene>
+        </div>
+        <p>Faraday Wing</p>
+        <button
+          class="enter-btn"
+          onclick="window.location.href='Faraday-wing.html'"
+        >
+          Enter
+        </button>
+      </div>
+
+      <div class="building-card">
+        <div class="scene-container">
+          <a-scene embedded vr-mode-ui="enabled: true">
+            <a-entity
+              gltf-model="2/scene.gltf"
+              position="0 1 -2"
+              scale="0.6 0.6 0.6"
+              animation="property: rotation; to: 0 50 0; loop: true; dur: 15000; easing: linear;"
+            ></a-entity>
+          </a-scene>
+        </div>
+        <p>Keyworth Center</p>
+        <button
+          class="enter-btn"
+          onclick="window.location.href='Keyworth.html'"
+        >
+          Enter
+        </button>
+      </div>
+
+      <div class="building-card">
+        <div class="scene-container">
+          <a-scene embedded vr-mode-ui="enabled: true">
+            <a-entity
+              gltf-model="modern_luxury_villa_house_building_home/scene.gltf"
+              position="0 0.8 -2"
+              scale="0.08 0.08 0.08"
+              animation="property: rotation; to: 0 50 0; loop: true; dur: 15000; easing: linear;"
+            ></a-entity>
+          </a-scene>
+        </div>
+        <p>LSBU Hub</p>
+        <button class="enter-btn" onclick="window.location.href='Hub.html'">
+          Enter
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
